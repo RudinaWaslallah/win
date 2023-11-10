@@ -2,6 +2,13 @@
 include './inc/conn.php';
 include './inc/form.php';
 
+ $sql='SELECT * FROM users';
+ $result= mysqli_query($conn,$sql);
+ $users=mysqli_fetch_all($result , MYSQLI_ASSOC);
+
+ 
+mysqli_free_result($result);
+mysqli_close($conn);
 
 ?>
 
@@ -20,6 +27,11 @@ include './inc/form.php';
     <input type="text" name="email" id="email" placeholder="Email">
     <input type="Submit" name="Submit"  value="Send">
 </form>
+
+<?php foreach($users as $user): ?>
+   <h1><?php echo htmlspecialchars($user['firstName']). ' '. htmlspecialchars($user['lastName']); ?></h1>
+ <?php endforeach; ?>
+
     <script src="./js/script.js"></script>
 </body>
 </html>
