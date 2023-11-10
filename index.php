@@ -1,24 +1,21 @@
 <?php
-$conn =mysqli_connect('localhost','root','root','win');
-
-if($conn){
-    echo 'success';
-}else{
-    echo'fail';
+$conn = mysqli_connect('localhost','root','root','win');
+if(!$conn){
+    echo'Error: ' . mysqli_connect_error();
 }
-
-
 
 $firstName=    $_POST['firstName'];
 $lastName=     $_POST['lastName'];
 $email=        $_POST['email'];
 
 if(isset($_POST['Submit'])) {
-echo $firstName .'  '. $lastName .'  '. $email;
+  $sql ="INSERT INTO users(firstName, lastName, email) 
+         VALUES('$firstName', '$lastName','$email')";
+  mysqli_query($conn,$sql);
 }
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
