@@ -1,6 +1,8 @@
 <?php
 include './inc/conn.php';
-include './inc/form.php'
+include './inc/form.php';
+
+
 ?>
 
 <!DOCTYPE html> 
