@@ -1,18 +1,6 @@
 <?php
-$conn = mysqli_connect('localhost','root','root','win');
-if(!$conn){
-    echo'Error: ' . mysqli_connect_error();
-}
-
-$firstName=    $_POST['firstName'];
-$lastName=     $_POST['lastName'];
-$email=        $_POST['email'];
-
-if(isset($_POST['Submit'])) {
-  $sql ="INSERT INTO users(firstName, lastName, email) 
-         VALUES('$firstName', '$lastName','$email')";
-  mysqli_query($conn,$sql);
-}
+include './inc/conn.php';
+include './inc/form.php'
 ?>
 
 <!DOCTYPE html> 
