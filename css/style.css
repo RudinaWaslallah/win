@@ -1,30 +1,42 @@
-#countdwon{
-    color:crimson;
+#countdown {
+    color: crimson;
     padding: 10px;
     border: 1px solid;
     border-radius: 5px;
-
-
-
 }
 
-#cards{
-
+#cards {
     display: none;
+    margin-top: 20px; /* تباعد بين التسجيل واختيار الفائز */
 }
-#loader{
 
+#loader {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-5%,-50%);
+    transform: translate(-50%, -50%);
 }
-.loader-con{
+
+.loader-con {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:rgb(93 86 87 / 58%)
+    background-color: rgb(93 86 87 / 58%);
+    z-index: 999; /* لتظهر فوق جميع العناصر الأخرى */
+}
+
+/* أنماط إضافية لتحسين المظهر */
+.btn-primary {
+    margin-top: 20px;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-title {
+    color: crimson;
 }

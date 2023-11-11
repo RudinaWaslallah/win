@@ -18,8 +18,9 @@ function progressSim(){
 	ctx.stroke();
 	if(al >= 100){
 		clearTimeout(sim);
-	    // Add scripting here that will run when progress completes
+	   
 	}
 	al++;
 }
 var sim = setInterval(progressSim, 50);
+
