@@ -49,7 +49,7 @@ mysqli_close($conn);
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">First Name</label>
     <input type="text" name="firstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text error"><?php echo $errors['firstNameError'] ?></div>
+    <div id="emailHelp" class="form-text error"> <?php echo $errors['firstNameError'] ?> </div>
   </div>
   <div class="mt-5">
     <label for="exampleInputEmail1" class="form-label">Last Name</label>
