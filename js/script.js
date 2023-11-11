@@ -19,19 +19,3 @@ var x = setInterval(function() {
     }
 }, 1000);
 
-// Winner
-const win = document.querySelector("#winner");
-const loader = document.querySelector(".loader-con");
-var myModal = new bootstrap.Modal(document.getElementById('modal'), {
-    keyboard: false
-});
-
-const cards = document.querySelector("#cards");
-
-win.addEventListener('click', function() {
-    loader.style.display = 'block';
-    setTimeout(function() {
-        myModal.show();
-    
-    }, 1000);
-});

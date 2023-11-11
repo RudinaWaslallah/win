@@ -27,6 +27,9 @@
     background-color: rgb(93 86 87 / 58%);
     z-index: 999; /* لتظهر فوق جميع العناصر الأخرى */
 }
+.list-group-item{
+    background:transparent;
+}
 
 /* أنماط إضافية لتحسين المظهر */
 .btn-primary {
@@ -40,3 +43,6 @@
 .modal-title {
     color: crimson;
 }
+ img{
+ max-width: 100%;
+ }

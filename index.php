@@ -9,22 +9,35 @@ include './inc/db_close.php';
 
 <header class="mb-auto">
     <div>
-        <h3 class="float-md-start mb-0">RU Shop</h3>
+        <h2 class="float-md-start mb-0">RW store</h2>
         <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link" href="#">Features</a>
             <a class="nav-link" href="#">Contact</a>
         </nav>
     </div>
-    <div class="position-relative  text-center">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 fw-normal">Register Now</h1>
-            <p class="lead fw-normal">To get coupons</p>
-            <p class="lead fw-normal">Time to finish</p>
+    <div class="position-relative text-center">
+        <div class="col-md-5 p-lg-5 mx-auto">
+            <img src="images/unnamed.png"alt="">
+            <h1 class="display-4 fw-normal">Get an iPhone</h1>
+            <p class="lead fw-normal"> An opportunity to win an iPhone
+                from the RW store
+            </p>
+            <p class="lead fw-normal">Competition end time </p>
             <h3 id="countdown"></h3>
-
-        </div>
+            
+</div>
+   <div class="container">  
+    <h3><h3> Profit steps:</h3>
+  <ul class="list-group">          
+  <li class="list-group-item">Register in Web app here </li>
+  <li class="list-group-item"> Follow the store on instagram</li>
+ 
+   </ul>
+  </div>
     </div>
 </header>
+
+<div class="container">
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
     <h3>Please Enter your information</h3>
