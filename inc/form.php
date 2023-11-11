@@ -13,22 +13,20 @@ if(isset($_POST['Submit'])) {
          VALUES('$firstName', '$lastName','$email')";
   
   if(empty($firstName)){
-    echo 'First name empty';
+    echo '';
   }elseif(empty($lastName)){
     echo 'Last name empty';
   }elseif(empty($email)){
     echo 'Email empty';
- }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+  }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
     echo 'please Enter valied Email';
- }
- 
- else{
+  }else{
     if(mysqli_query($conn,$sql)){
         header('Location: index.php');
     }else{
       echo'Error: ' . mysqli_error($conn);
     }
   
-}
+  }
 
 }
