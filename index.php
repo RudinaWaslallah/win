@@ -6,7 +6,6 @@ $sql = 'SELECT * FROM users';
 $result = mysqli_query($conn, $sql);
 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-
 mysqli_free_result($result);
 mysqli_close($conn);
 
@@ -30,12 +29,10 @@ mysqli_close($conn);
     <div>
       <h3 class="float-md-start mb-0">RU Shope</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" href="#">Features</a>
         <a class="nav-link" href="#">Contact</a>
       </nav>
     </div>
-  
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
     <div class="col-md-5 p-lg-5 mx-auto my-5">
       <h1 class="display-4 fw-normal">Register Now</h1>
@@ -52,18 +49,18 @@ mysqli_close($conn);
 <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">First Name</label>
     <input type="text" name="firstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text error"></div>
+    <div id="emailHelp" class="form-text error"><?php echo $errors['firstNameError'] ?></div>
   </div>
   <div class="mt-5">
     <label for="exampleInputEmail1" class="form-label">Last Name</label>
     <input type="text" name="lastName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text error"></div>
+    <div id="emailHelp" class="form-text error"><?php echo $errors['lastNameError'] ?></div>
   </div>
   
   <div class="mt-5">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="text"name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text error"></div>
+    <div id="emailHelp" class="form-text error"><?php echo $errors['emailError'] ?></div>
   </div>
   
   

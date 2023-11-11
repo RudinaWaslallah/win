@@ -1,8 +1,13 @@
 <?php
-$firstName=    $_POST['firstName'];
-$lastName=     $_POST['lastName'];
-$email=        $_POST['email'];
+$firstName =   $_POST['firstName'];
+$lastName =     $_POST['lastName'];
+$email =        $_POST['email'];
 
+$errors=[
+  'firstNameError'=>'',
+  'lastNameError'=>'',
+  'emailError'=>'',
+];
 if(isset($_POST['Submit'])) {
 
   $firstName=   mysqli_real_escape_string($conn, $_POST['firstName']);
@@ -13,13 +18,13 @@ if(isset($_POST['Submit'])) {
          VALUES('$firstName', '$lastName','$email')";
   
   if(empty($firstName)){
-    echo '';
+    $errors['firstNameError']='please enter first Name';
   }elseif(empty($lastName)){
-    echo 'Last name empty';
+    $errors['lastNameError']='please enter Last Name';
   }elseif(empty($email)){
-    echo 'Email empty';
+    $errors['EmailError']='please enter Email';
   }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
-    echo 'please Enter valied Email';
+      $errors['emailError']='please enter valid email';
   }else{
     if(mysqli_query($conn,$sql)){
         header('Location: index.php');
