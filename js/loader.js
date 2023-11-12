@@ -37,5 +37,3 @@ win.addEventListener('click', function() {
     loader.style.display = 'block';
     sim = setInterval(progressSim, 20);
 });
-
-
