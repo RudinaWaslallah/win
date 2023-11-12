@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showWinnerButton() {
         winnerButton.style.display = 'block';
     }
-var countDownDate = new Date("Nov 12, 2023 4:22:10").getTime();
+var countDownDate = new Date(" Dec 30, 2023 5:7:10").getTime();
 var x = setInterval(function() {
     var counter = document.querySelector("#countdown");
     var now = new Date().getTime();
