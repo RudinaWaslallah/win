@@ -71,10 +71,12 @@ include './inc/db_close.php';
 
 <!-- Button trigger modal -->
 <div class="d-grid gap-2 col-6 mx-auto my-5">
-    <button type="button" id="winner" class="btn btn-primary">
+    <button type="button" id="winner" class="btn btn-primary" style="display: none;">
         Select winner
     </button>
 </div>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">

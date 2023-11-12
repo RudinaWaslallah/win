@@ -1,4 +1,12 @@
-var countDownDate = new Date("Dec 30, 2024 19:37:25").getTime();
+
+document.addEventListener('DOMContentLoaded', function () {
+    var winnerButton = document.getElementById('winner');
+
+    // Function to show the winner button
+    function showWinnerButton() {
+        winnerButton.style.display = 'block';
+    }
+var countDownDate = new Date("Nov 12, 2023 4:22:10").getTime();
 var x = setInterval(function() {
     var counter = document.querySelector("#countdown");
     var now = new Date().getTime();
@@ -15,10 +23,18 @@ var x = setInterval(function() {
 
     if (distance < 0) {
         clearInterval(x);
+        counter.innerHTML = "Time's up!";
         counter.innerHTML = "You come later ";
+        showWinnerButton();
     }
 }, 1000);
 
+// Click event listener for the winner button
+winnerButton.addEventListener('click', function () {
+    selectWinner();
+});
+
+});
 
 
 
